@@ -1,0 +1,210 @@
+site_name: ElectronSight
+site_url: https://splintersfury.github.io/ElectronSight/
+site_description: >-
+  Comprehensive security reference for Electron desktop applications —
+  internals, attack surfaces, source/sink taxonomy, CVE database, and exploitation techniques.
+site_author: Ahmad Abdillah
+
+repo_name: splintersfury/ElectronSight
+repo_url: https://github.com/splintersfury/ElectronSight
+
+copyright: >-
+  Copyright &copy; 2026 Ahmad Abdillah &mdash; For authorized security research and education only.
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      note: octicons/tag-16
+      danger: octicons/zap-16
+      warning: octicons/alert-16
+      tip: octicons/light-bulb-16
+
+extra_css:
+  - stylesheets/custom.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+plugins:
+  - search
+  - glightbox
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+nav:
+  - Home: index.md
+  - Internals:
+    - internals/index.md
+    - Process Model: internals/process-model.md
+    - IPC Architecture: internals/ipc.md
+    - Context Isolation: internals/context-isolation.md
+    - Preload Scripts: internals/preload.md
+    - Sandbox Architecture: internals/sandbox.md
+    - Electron Fuses: internals/fuses.md
+    - ASAR Format: internals/asar.md
+    - V8 Snapshots: internals/v8-snapshots.md
+    - Session & Protocols: internals/sessions.md
+    - Native Modules: internals/native-modules.md
+  - Attack Surfaces:
+    - surfaces/index.md
+    - BrowserWindow Config: surfaces/browserwindow.md
+    - IPC Channels: surfaces/ipc-channels.md
+    - Protocol Handlers: surfaces/protocol-handlers.md
+    - Update Mechanism: surfaces/update-mechanism.md
+    - webContents API: surfaces/webcontents.md
+    - ASAR Package: surfaces/asar-surface.md
+    - Developer Tools: surfaces/devtools.md
+    - File System: surfaces/filesystem.md
+    - Native Bindings: surfaces/native-bindings.md
+  - Sources:
+    - sources/index.md
+    - URL & Navigation: sources/url-navigation.md
+    - DOM & Messaging: sources/dom-messaging.md
+    - Storage (Stored XSS): sources/storage.md
+    - Network & WebSocket: sources/network.md
+    - File System: sources/filesystem.md
+    - Electron IPC: sources/ipc-sources.md
+    - Environment & CLI: sources/env-cli.md
+    - Side-Channels: sources/side-channels.md
+  - Sinks:
+    - sinks/index.md
+    - RCE Sinks: sinks/rce.md
+    - File System Sinks: sinks/filesystem.md
+    - HTML Injection Sinks: sinks/html-injection.md
+    - Navigation & Open Sinks: sinks/navigation.md
+    - IPC Escalation Sinks: sinks/ipc-escalation.md
+    - Process & System Sinks: sinks/process-system.md
+    - Crypto & Secrets Sinks: sinks/crypto-secrets.md
+  - Sanitizers:
+    - sanitizers/index.md
+    - contextBridge: sanitizers/context-bridge.md
+    - Content Security Policy: sanitizers/csp.md
+    - Sandbox & Isolation: sanitizers/sandbox-isolation.md
+    - Input Validation: sanitizers/input-validation.md
+    - DOMPurify: sanitizers/dompurify.md
+    - Anti-Patterns: sanitizers/anti-patterns.md
+  - Vuln Classes:
+    - vuln-classes/index.md
+    - XSS → RCE: vuln-classes/xss-to-rce.md
+    - contextIsolation=false: vuln-classes/context-isolation-false.md
+    - nodeIntegration=true: vuln-classes/node-integration-true.md
+    - Protocol Handler RCE: vuln-classes/protocol-handler-rce.md
+    - ASAR Tampering: vuln-classes/asar-tampering.md
+    - Update Poisoning: vuln-classes/update-poisoning.md
+    - Prototype Pollution: vuln-classes/prototype-pollution.md
+    - IPC Injection: vuln-classes/ipc-injection.md
+    - shell.openExternal Abuse: vuln-classes/open-external.md
+    - Fuse Misconfiguration: vuln-classes/fuse-misconfig.md
+    - webSecurity=false: vuln-classes/websecurity-false.md
+    - Preload Script Bypass: vuln-classes/preload-bypass.md
+  - CVEs:
+    - cves/index.md
+    - Discord CVE-2020-15174: cves/CVE-2020-15174.md
+    - Slack HN-783877: cves/slack-hn-783877.md
+    - WhatsApp CVE-2019-18426: cves/CVE-2019-18426.md
+    - WhatsApp CVE-2025-30401: cves/CVE-2025-30401.md
+    - VS Code CVE-2023-39956: cves/CVE-2023-39956.md
+    - Protocol Handler CVE-2018-1000006: cves/CVE-2018-1000006.md
+    - Electron nodeIntegration CVE-2018-1000136: cves/CVE-2018-1000136.md
+    - V8 Snapshot CVE-2025-55305: cves/CVE-2025-55305.md
+    - ASAR Integrity CVE-2024-46992: cves/CVE-2024-46992.md
+    - Signal RCE 2018: cves/signal-rce-2018.md
+    - Element CVE-2022-23597: cves/CVE-2022-23597.md
+    - Notion CVE-2024-23743: cves/CVE-2024-23743.md
+    - SiYuan CVE-2026-39846: cves/CVE-2026-39846.md
+    - Notesnook CVE-2026-33955: cves/CVE-2026-33955.md
+  - Case Studies:
+    - case-studies/index.md
+    - ElectroVolt (Black Hat 2022): case-studies/electrovolt.md
+    - Slack RCE Chain: case-studies/slack-rce.md
+    - Teams Zero-Click RCE: case-studies/teams-zero-click.md
+    - V8 Snapshot Backdooring: case-studies/v8-snapshot-backdoor.md
+    - Discord RCE Chain: case-studies/discord-rce.md
+  - Researchers:
+    - researchers/index.md
+    - Masato Kinugawa: researchers/masato-kinugawa.md
+    - Oskars Vegeris: researchers/oskars-vegeris.md
+    - Aaditya Purani: researchers/aaditya-purani.md
+    - Doyensec: researchers/doyensec.md
+    - Trail of Bits: researchers/trail-of-bits.md
+  - Tools:
+    - tools/index.md
+    - Electronegativity: tools/electronegativity.md
+    - asar CLI: tools/asar-cli.md
+    - DevTools Tricks: tools/devtools.md
+    - @electron/fuses: tools/fuses-tool.md
+    - electron-builder: tools/electron-builder.md
+  - Mitigations:
+    - mitigations/index.md
+    - Secure Configuration: mitigations/secure-config.md
+    - Security Checklist: mitigations/checklist.md
+    - Fuse Hardening: mitigations/fuse-hardening.md
+    - CSP Configuration: mitigations/csp.md
+    - IPC Hardening: mitigations/ipc-hardening.md
+  - Guides:
+    - guides/index.md
+    - Assessing an Electron App: guides/assessment.md
+    - Finding XSS→RCE Chains: guides/xss-to-rce.md
+    - IPC Security Testing: guides/ipc-testing.md
+    - Auditing Fuses: guides/fuse-auditing.md
+    - ASAR Extraction & Analysis: guides/asar-analysis.md
