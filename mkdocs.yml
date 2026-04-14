@@ -192,7 +192,7 @@ nav:
     - Electronegativity: tools/electronegativity.md
     - asar CLI: tools/asar-cli.md
     - DevTools Tricks: tools/devtools.md
-    - @electron/fuses: tools/fuses-tool.md
+    - "@electron/fuses": tools/fuses-tool.md
     - electron-builder: tools/electron-builder.md
   - Mitigations:
     - mitigations/index.md
