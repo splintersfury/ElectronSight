@@ -118,7 +118,7 @@ cp malicious_payload.node /path/to/app.asar.unpacked/native_module.node
 
 ### Bypass 2: V8 Snapshots (CVE-2025-55305)
 
-V8 snapshot blobs are loaded *before* ASAR integrity validation runs. An attacker who replaces `snapshot_blob.bin` executes pre-compiled JavaScript that bypasses the integrity check entirely. See [V8 Snapshots](v8-snapshots.md).
+V8 snapshot blobs are loaded *before* ASAR integrity validation runs. An attacker who replaces `snapshot_blob.bin` executes pre-compiled JavaScript that bypasses the integrity check entirely. See [V8 Snapshots](../internals/v8-snapshots.md).
 
 ---
 
