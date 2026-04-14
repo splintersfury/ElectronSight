@@ -31,6 +31,7 @@ jobs:
       - name: Install MkDocs and plugins
         run: |
           pip install mkdocs-material
+          pip install mkdocs-glightbox
           pip install mkdocs-minify-plugin || true
           pip install mkdocs-git-revision-date-localized-plugin || true
 
