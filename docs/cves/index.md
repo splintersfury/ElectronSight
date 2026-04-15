@@ -129,14 +129,14 @@ The CVE table below is a map of how that progression played out across real apps
 
 ---
 
-## Payout Leaderboard (Known Bug Bounties)
+## Known Payouts
 
 | Researcher | App | Finding | Payout |
 |-----------|-----|---------|--------|
-| Masato Kinugawa | Discord | CVE-2020-15174 | $10,000 |
-| Oskars Vegeris | Slack | HN-783877 | $30,000 |
-| Aaditya Purani | Multiple | ElectroVolt research | Research |
-| Trail of Bits | 1Password | CVE-2025-55305 | Coordinated disclosure |
+| Oskars Vegeris | Slack | HN-783877 (zero-click RCE) | $30,000 |
+| Masato Kinugawa | Discord | CVE-2020-15174 (XSS → RCE) | $10,000 |
+
+Most payouts are under NDA. The two above are publicly confirmed. The actual numbers across the full CVE list are almost certainly higher.
 
 ---
 
