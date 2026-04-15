@@ -15,77 +15,77 @@ These are the 12 classes that show up in real CVEs across real apps. Each one ha
 
 <div class="es-card-grid">
 
-<div class="es-card">
+<a class="es-card" href="xss-to-rce.md">
 <div class="es-card-title">💥 XSS → RCE</div>
 <div class="es-card-desc">DOM injection in a misconfigured renderer reaches Node.js. The classic Electron chain. Requires: contextIsolation:false OR nodeIntegration:true OR over-privileged preload.</div>
 <div class="es-card-meta"><span class="badge badge-critical">CRITICAL</span> <span class="badge badge-info">Most Common</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="context-isolation-false.md">
 <div class="es-card-title">🔓 contextIsolation=false</div>
 <div class="es-card-desc">Disabling context isolation merges the preload and page JS contexts. XSS gains direct access to ipcRenderer, Node.js globals, and preload-defined functions.</div>
 <div class="es-card-meta"><span class="badge badge-critical">CRITICAL</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="node-integration-true.md">
 <div class="es-card-title">🔩 nodeIntegration=true</div>
 <div class="es-card-desc">Enabling Node.js in the renderer process. Any XSS immediately becomes RCE via require('child_process'). The most dangerous single option in Electron.</div>
 <div class="es-card-meta"><span class="badge badge-critical">CRITICAL</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="protocol-handler-rce.md">
 <div class="es-card-title">🔗 Protocol Handler RCE</div>
 <div class="es-card-desc">Custom or OS protocol handlers open URLs in the OS. Attacker-controlled protocol URLs can launch executables, trigger Follina, or capture NTLM hashes.</div>
 <div class="es-card-meta"><span class="badge badge-critical">CRITICAL</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="asar-tampering.md">
 <div class="es-card-title">📦 ASAR Tampering</div>
 <div class="es-card-desc">Modifying the app.asar archive to inject malicious code. Effective without ASAR integrity validation. Enables persistence, local LPE, and supply chain attacks.</div>
 <div class="es-card-meta"><span class="badge badge-high">HIGH</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="update-poisoning.md">
 <div class="es-card-title">🔄 Update Poisoning</div>
 <div class="es-card-desc">Compromising the auto-update mechanism to deliver malicious updates. electron-updater misconfigurations allow downgrade attacks and unsigned package delivery.</div>
 <div class="es-card-meta"><span class="badge badge-critical">CRITICAL</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="prototype-pollution.md">
 <div class="es-card-title">🧬 Prototype Pollution</div>
 <div class="es-card-desc">Poisoning Object.prototype reaches security checks in the main process or preload. Can bypass auth, corrupt config, or enable code execution via gadget chains.</div>
 <div class="es-card-meta"><span class="badge badge-high">HIGH</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="ipc-injection.md">
 <div class="es-card-title">📡 IPC Injection</div>
 <div class="es-card-desc">Sending crafted messages to IPC handlers that perform privileged operations without validating input or sender origin. The most common post-XSS escalation path.</div>
 <div class="es-card-meta"><span class="badge badge-critical">CRITICAL</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="open-external.md">
 <div class="es-card-title">🔗 shell.openExternal Abuse</div>
 <div class="es-card-desc">Passing attacker-controlled URLs to shell.openExternal. Exploits OS protocol handlers (ms-msdt, search-ms, file://) for RCE without requiring renderer compromise.</div>
 <div class="es-card-meta"><span class="badge badge-high">HIGH</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="fuse-misconfig.md">
 <div class="es-card-title">⚡ Fuse Misconfiguration</div>
 <div class="es-card-desc">Dangerous Electron fuses left enabled: RunAsNode, NodeOptions, NodeCliInspect. Enables arbitrary Node.js execution via environment variables or command-line flags.</div>
 <div class="es-card-meta"><span class="badge badge-high">HIGH</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="websecurity-false.md">
 <div class="es-card-title">🌐 webSecurity=false</div>
 <div class="es-card-desc">Disabling web security bypasses Same-Origin Policy, CORS, and mixed content blocking. Enables CSRF, cross-origin data theft, and local file access from the web.</div>
 <div class="es-card-meta"><span class="badge badge-high">HIGH</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="preload-bypass.md">
 <div class="es-card-title">🔀 Preload Script Bypass</div>
 <div class="es-card-desc">Techniques to execute code in the preload script's isolated world or subvert its security controls: prototype pollution, exposed functions, over-privileged bridge.</div>
 <div class="es-card-meta"><span class="badge badge-critical">CRITICAL</span></div>
-</div>
+</a>
 
 </div>
 

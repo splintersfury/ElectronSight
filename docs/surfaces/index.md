@@ -17,59 +17,59 @@ Start with BrowserWindow config. Always. One misconfigured `webPreferences` key 
 
 <div class="es-card-grid">
 
-<div class="es-card">
+<a class="es-card" href="browserwindow.md">
 <div class="es-card-title">🖼️ BrowserWindow Config</div>
 <div class="es-card-desc">webPreferences settings that determine renderer capabilities. The most critical configuration surface — a single wrong option opens the entire attack surface.</div>
 <div class="es-card-meta"><span class="badge badge-critical">CRITICAL</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="ipc-channels.md">
 <div class="es-card-title">📡 IPC Channels</div>
 <div class="es-card-desc">ipcMain handlers exposed to any renderer. Each handler is an attack surface — a compromised renderer can call any handler it can discover.</div>
 <div class="es-card-meta"><span class="badge badge-critical">CRITICAL</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="protocol-handlers.md">
 <div class="es-card-title">🔗 Protocol Handlers</div>
 <div class="es-card-desc">Custom URL schemes registered with the OS. Attackers can trigger these from web pages, emails, or other apps. Parameters are fully attacker-controlled.</div>
 <div class="es-card-meta"><span class="badge badge-high">HIGH</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="update-mechanism.md">
 <div class="es-card-title">🔄 Update Mechanism</div>
 <div class="es-card-desc">Auto-update infrastructure. If the update channel is compromised or MitM'd, the attacker delivers code that runs with the app's full identity.</div>
 <div class="es-card-meta"><span class="badge badge-critical">CRITICAL</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="webcontents.md">
 <div class="es-card-title">🌐 webContents API</div>
 <div class="es-card-desc">Main process API for controlling renderers — executeJavaScript, loadURL, navigation events. Over-use = privilege boundary violations.</div>
 <div class="es-card-meta"><span class="badge badge-high">HIGH</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="asar-surface.md">
 <div class="es-card-title">📦 ASAR Package</div>
 <div class="es-card-desc">The application archive on disk. Without integrity validation, local attackers can modify app code. Unpacked files are never validated.</div>
 <div class="es-card-meta"><span class="badge badge-high">HIGH</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="devtools.md">
 <div class="es-card-title">🔧 Developer Tools</div>
 <div class="es-card-desc">DevTools enabled in production, --inspect CLI flags not disabled by fuses, debug ports accessible. Gives JS REPL in the main process.</div>
 <div class="es-card-meta"><span class="badge badge-high">HIGH</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="filesystem.md">
 <div class="es-card-title">📁 File System</div>
 <div class="es-card-desc">Apps that read user-provided file paths or monitor directories. File parsing of untrusted content (Markdown, PDF, images) may trigger code execution.</div>
 <div class="es-card-meta"><span class="badge badge-medium">MEDIUM</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="native-bindings.md">
 <div class="es-card-title">🔩 Native Bindings</div>
 <div class="es-card-desc">.node native addons processing attacker-controlled data. C/C++ code with memory safety bugs = memory corruption in the main process.</div>
 <div class="es-card-meta"><span class="badge badge-medium">MEDIUM</span></div>
-</div>
+</a>
 
 </div>
 

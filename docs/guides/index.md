@@ -13,35 +13,35 @@ Practical step-by-step guides for Electron security research.
 
 <div class="es-card-grid">
 
-<div class="es-card">
+<a class="es-card" href="assessment.md">
 <div class="es-card-title">📋 Assessing an Electron App</div>
 <div class="es-card-desc">Start-to-finish methodology for assessing a new Electron app. From initial recon to triage to finding candidates.</div>
 <div class="es-card-meta"><span class="badge badge-info">Beginner</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="xss-to-rce.md">
 <div class="es-card-title">🔍 Finding XSS→RCE Chains</div>
 <div class="es-card-desc">How to systematically find DOM XSS vectors, map the preload bridge, identify escalation paths, and build a working chain.</div>
 <div class="es-card-meta"><span class="badge badge-high">Intermediate</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="ipc-testing.md">
 <div class="es-card-title">📡 IPC Security Testing</div>
 <div class="es-card-desc">Enumerate all IPC channels, find over-privileged handlers, test sender validation, and exploit broken IPC security.</div>
 <div class="es-card-meta"><span class="badge badge-high">Intermediate</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="fuse-auditing.md">
 <div class="es-card-title">⚡ Auditing Fuses</div>
 <div class="es-card-desc">Read fuse state from any Electron app, understand which enabled fuses are risky, and write a fuse audit report.</div>
 <div class="es-card-meta"><span class="badge badge-info">Quick</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="asar-analysis.md">
 <div class="es-card-title">📦 ASAR Extraction & Analysis</div>
 <div class="es-card-desc">Extract app.asar, navigate the codebase, find security-critical files, and understand what's outside the ASAR.</div>
 <div class="es-card-meta"><span class="badge badge-info">Beginner</span></div>
-</div>
+</a>
 
 </div>
 

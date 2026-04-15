@@ -15,53 +15,53 @@ Electron apps have more sources than web apps. The main process can read files, 
 
 <div class="es-card-grid">
 
-<div class="es-card">
+<a class="es-card" href="url-navigation.md">
 <div class="es-card-title">🌐 URL & Navigation</div>
 <div class="es-card-desc">URL parameters, hash fragments, custom protocol parameters (`myapp://`), navigation events. Custom protocols are cross-origin invocable — any website can trigger them.</div>
 <div class="es-card-meta"><span class="badge badge-source">SOURCE</span> <span class="badge badge-high">HIGH</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="dom-messaging.md">
 <div class="es-card-title">📨 DOM & Messaging</div>
 <div class="es-card-desc">postMessage, BroadcastChannel, WebSocket messages. The killer: apps often forget to check `event.origin` before acting on postMessage data.</div>
 <div class="es-card-meta"><span class="badge badge-source">SOURCE</span> <span class="badge badge-high">HIGH</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="storage.md">
 <div class="es-card-title">💾 Storage (Stored XSS)</div>
 <div class="es-card-desc">localStorage, IndexedDB, userData config files. Data written by an earlier XSS payload becomes a source the next time the app reads it. The time delay makes these easy to miss.</div>
 <div class="es-card-meta"><span class="badge badge-source">SOURCE</span> <span class="badge badge-critical">CRITICAL</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="network.md">
 <div class="es-card-title">🌍 Network</div>
 <div class="es-card-desc">Server responses, auto-updater YAML, WebSocket events. If the update server is HTTP or the response isn't validated, network data is fully attacker-controlled.</div>
 <div class="es-card-meta"><span class="badge badge-source">SOURCE</span> <span class="badge badge-high">HIGH</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="filesystem.md">
 <div class="es-card-title">📁 File System</div>
 <div class="es-card-desc">User-opened files, config files from userData, watched directories. Opening a malicious project file is a common social engineering vector for Electron apps.</div>
 <div class="es-card-meta"><span class="badge badge-source">SOURCE</span> <span class="badge badge-medium">MEDIUM</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="ipc-sources.md">
 <div class="es-card-title">🔌 IPC Callbacks</div>
 <div class="es-card-desc">Data sent from main process back to renderer via `webContents.send`. If main fetched it from the network or config, it's tainted data arriving in renderer-land.</div>
 <div class="es-card-meta"><span class="badge badge-source">SOURCE</span> <span class="badge badge-high">HIGH</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="env-cli.md">
 <div class="es-card-title">⚙️ Environment & CLI</div>
 <div class="es-card-desc">process.env, process.argv, NODE_OPTIONS. If the fuses aren't set, an attacker who can set env variables before launch has pre-renderer code execution.</div>
 <div class="es-card-meta"><span class="badge badge-source">SOURCE</span> <span class="badge badge-medium">MEDIUM</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="side-channels.md">
 <div class="es-card-title">📡 Side Channels</div>
 <div class="es-card-desc">Clipboard, SharedArrayBuffer timing, resource timing API. Lower impact individually but useful as primitives or for information disclosure.</div>
 <div class="es-card-meta"><span class="badge badge-source">SOURCE</span> <span class="badge badge-low">LOW</span></div>
-</div>
+</a>
 
 </div>
 

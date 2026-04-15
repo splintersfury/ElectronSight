@@ -15,41 +15,41 @@ This section documents what the real sanitizers are, what each one actually prot
 
 <div class="es-card-grid">
 
-<div class="es-card">
+<a class="es-card" href="context-bridge.md">
 <div class="es-card-title">🌉 contextBridge</div>
 <div class="es-card-desc">The architectural gateway between preload and page. Enforces that only explicitly exposed APIs are accessible. Useless if the exposed API itself is dangerous — it doesn't validate semantics, only structure.</div>
 <div class="es-card-meta"><span class="badge badge-sanitizer">SANITIZER</span> <span class="badge badge-high">Design-Bypassable</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="csp.md">
 <div class="es-card-title">🛡️ Content Security Policy</div>
 <div class="es-card-desc">Blocks inline script execution and restricts script sources. The browser's primary XSS defense. In Electron, apps must opt in — there's no automatic CSP. JSONP endpoints on allowlisted domains bypass it.</div>
 <div class="es-card-meta"><span class="badge badge-sanitizer">SANITIZER</span> <span class="badge badge-medium">Partial</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="sandbox-isolation.md">
 <div class="es-card-title">🏗️ Sandbox & Process Isolation</div>
 <div class="es-card-desc">OS-level process sandbox (seccomp-BPF, Seatbelt, Job Objects) plus contextIsolation. Limits what a compromised renderer can do without going through IPC. Strong — but IPC handlers still need independent validation.</div>
 <div class="es-card-meta"><span class="badge badge-sanitizer">SANITIZER</span> <span class="badge badge-high">Strong</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="input-validation.md">
 <div class="es-card-title">✅ Input Validation</div>
-<parameter name="new_string"><div class="es-card-desc">Type checks, allowlists, bounds checks applied in IPC handlers. The last line of defense — validation in main process handlers is the only validation that actually counts, since preload-only validation is skippable post-XSS.</div>
+<div class="es-card-desc">Type checks, allowlists, bounds checks applied in IPC handlers. The last line of defense — validation in main process handlers is the only validation that actually counts, since preload-only validation is skippable post-XSS.</div>
 <div class="es-card-meta"><span class="badge badge-sanitizer">SANITIZER</span> <span class="badge badge-medium">Depends on Implementation</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="dompurify.md">
 <div class="es-card-title">🧹 DOMPurify</div>
 <div class="es-card-desc">HTML sanitization library. The right tool for when you genuinely need innerHTML. Has had historical bypasses via mXSS (mutation XSS — where the parsed tree looks safe but transforms when moved). Must be kept current.</div>
 <div class="es-card-meta"><span class="badge badge-sanitizer">SANITIZER</span> <span class="badge badge-high">Strong (if current)</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="anti-patterns.md">
 <div class="es-card-title">🚫 Anti-Patterns</div>
 <div class="es-card-desc">Things that feel like sanitization but aren't: regex HTML stripping, denylist-based filtering, client-side-only validation, JSON.stringify before innerHTML, textContent-then-innerHTML. These create false confidence.</div>
 <div class="es-card-meta"><span class="badge badge-high">Watch Out</span></div>
-</div>
+</a>
 
 </div>
 

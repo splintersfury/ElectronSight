@@ -15,47 +15,47 @@ Sink severity isn't fixed. `innerHTML` in a standalone web app is a high-severit
 
 <div class="es-card-grid">
 
-<div class="es-card">
+<a class="es-card" href="rce.md">
 <div class="es-card-title">💀 RCE Sinks</div>
 <div class="es-card-desc">child_process.exec, eval, Function constructor, dynamic require, process.dlopen, vm.runInNewContext. Attacker-controlled input reaching any of these is game over.</div>
 <div class="es-card-meta"><span class="badge badge-critical">CRITICAL</span> <span class="badge badge-sink">SINK</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="filesystem.md">
 <div class="es-card-title">📂 File System Sinks</div>
 <div class="es-card-desc">fs.writeFile to traversal paths, symlink abuse, arbitrary reads. A write-anywhere primitive gets you persistence. A read-anywhere gets you credentials and private keys.</div>
 <div class="es-card-meta"><span class="badge badge-high">HIGH</span> <span class="badge badge-sink">SINK</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="html-injection.md">
 <div class="es-card-title">🖥️ HTML Injection Sinks</div>
 <div class="es-card-desc">innerHTML, dangerouslySetInnerHTML, Markdown rendering. The starting point for XSS chains — not Critical on its own, but the prerequisite for everything that follows.</div>
 <div class="es-card-meta"><span class="badge badge-high">HIGH</span> <span class="badge badge-sink">SINK</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="navigation.md">
 <div class="es-card-title">🔗 Navigation & Open Sinks</div>
 <div class="es-card-desc">shell.openExternal with attacker URLs. On Windows: ms-msdt, search-ms, file:// executables. On macOS: file:// apps. This one gets underestimated constantly.</div>
 <div class="es-card-meta"><span class="badge badge-high">HIGH</span> <span class="badge badge-sink">SINK</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="ipc-escalation.md">
 <div class="es-card-title">🔌 IPC Escalation Sinks</div>
 <div class="es-card-desc">ipcMain handlers that call exec/spawn/openExternal with renderer input. The modern XSS→RCE path: XSS fires, calls contextBridge API, which calls privileged IPC handler.</div>
 <div class="es-card-meta"><span class="badge badge-critical">CRITICAL</span> <span class="badge badge-sink">SINK</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="process-system.md">
 <div class="es-card-title">⚙️ Process & System Sinks</div>
 <div class="es-card-desc">process.dlopen, shell.openPath, dynamic require on filesystem paths. Often overlooked — process.dlopen bypasses require() safety entirely and loads arbitrary native code.</div>
 <div class="es-card-meta"><span class="badge badge-high">HIGH</span> <span class="badge badge-sink">SINK</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="crypto-secrets.md">
 <div class="es-card-title">🔐 Crypto & Secrets Sinks</div>
 <div class="es-card-desc">Hardcoded API keys in ASAR, TLS validation disabled, plaintext credential storage. The secrets you extract from app.asar are often immediately usable — no exploitation required.</div>
 <div class="es-card-meta"><span class="badge badge-medium">MEDIUM</span> <span class="badge badge-sink">SINK</span></div>
-</div>
+</a>
 
 </div>
 

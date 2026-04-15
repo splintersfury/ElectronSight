@@ -13,35 +13,35 @@ The researchers who have shaped the field of Electron security research — thro
 
 <div class="es-card-grid">
 
-<div class="es-card">
+<a class="es-card" href="masato-kinugawa.md">
 <div class="es-card-title">Masato Kinugawa</div>
 <div class="es-card-desc">Japanese researcher known for deep XSS → RCE exploitation. Discord CVE-2020-15174. Expert in browser engine quirks and Electron's JavaScript context model.</div>
 <div class="es-card-meta"><span class="badge badge-critical">CVE-2020-15174</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="oskars-vegeris.md">
 <div class="es-card-title">Oskars Vegeris</div>
 <div class="es-card-desc">Zero-click RCE researcher. $30,000 Slack finding. Teams zero-click. Pioneered the "workspace metadata XSS → IPC → openExternal" chain across multiple apps.</div>
 <div class="es-card-meta"><span class="badge badge-critical">HN-783877</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="aaditya-purani.md">
 <div class="es-card-title">Aaditya Purani</div>
 <div class="es-card-desc">ElectroVolt researcher (Black Hat 2022). Systematic analysis of Electron IPC security. Created methodology for finding preload script vulnerabilities at scale.</div>
 <div class="es-card-meta"><span class="badge badge-high">ElectroVolt</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="doyensec.md">
 <div class="es-card-title">Doyensec</div>
 <div class="es-card-desc">Security firm behind Electronegativity static analysis tool. Extensive Electron app research. electron-updater CVE. Systematic auditing methodology for Electron apps.</div>
 <div class="es-card-meta"><span class="badge badge-info">Electronegativity</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="trail-of-bits.md">
 <div class="es-card-title">Trail of Bits</div>
 <div class="es-card-desc">V8 snapshot backdooring research. CVE-2025-55305 (1Password). Deep Electron internals research including ASAR integrity bypass and snapshot attack primitives.</div>
 <div class="es-card-meta"><span class="badge badge-high">CVE-2025-55305</span></div>
-</div>
+</a>
 
 </div>
 

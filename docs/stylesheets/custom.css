@@ -229,7 +229,18 @@ body {
   border-radius: 8px;
   padding: 1.5rem;
   transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s;
-  cursor: default;
+  cursor: pointer;
+}
+
+a.es-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: none !important;
+}
+
+a.es-card:hover {
+  border-bottom: none !important;
 }
 
 .es-card:hover {

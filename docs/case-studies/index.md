@@ -13,35 +13,35 @@ In-depth technical analysis of landmark Electron security findings. Each study c
 
 <div class="es-card-grid">
 
-<div class="es-card">
+<a class="es-card" href="electrovolt.md">
 <div class="es-card-title">ElectroVolt — Black Hat 2022</div>
 <div class="es-card-desc">Aaditya Purani's systematic IPC vulnerability methodology. Found RCE in Mattermost, Bitwarden, GitHub Desktop, and others using a repeatable pattern.</div>
 <div class="es-card-meta"><span class="badge badge-critical">Multiple RCE</span> <span class="badge badge-info">2022</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="slack-rce.md">
 <div class="es-card-title">Slack RCE Chain</div>
 <div class="es-card-desc">Oskars Vegeris's $30,000 zero-click Slack RCE. Stored XSS in workspace metadata → IPC → shell.openExternal → protocol handler RCE.</div>
 <div class="es-card-meta"><span class="badge badge-critical">$30,000</span> <span class="badge badge-info">2021</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="teams-zero-click.md">
 <div class="es-card-title">Teams Zero-Click RCE</div>
 <div class="es-card-desc">Microsoft Teams zero-click RCE via chat message content. Same fundamental pattern as Slack — cross-app validation of the stored XSS → openExternal chain.</div>
 <div class="es-card-meta"><span class="badge badge-critical">Zero-click</span> <span class="badge badge-info">2021</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="v8-snapshot-backdoor.md">
 <div class="es-card-title">V8 Snapshot Backdooring</div>
 <div class="es-card-desc">Trail of Bits demonstrating that V8 heap snapshots bypass ASAR integrity validation. Breaks 1Password's tamper protection model.</div>
 <div class="es-card-meta"><span class="badge badge-high">CVE-2025-55305</span> <span class="badge badge-info">2025</span></div>
-</div>
+</a>
 
-<div class="es-card">
+<a class="es-card" href="discord-rce.md">
 <div class="es-card-title">Discord RCE Chain</div>
 <div class="es-card-desc">Masato Kinugawa's complete Discord RCE chain. Markdown XSS → DiscordNative preload exposure → DANGEROUS_openExternal → cmd.exe.</div>
 <div class="es-card-meta"><span class="badge badge-critical">$10,000</span> <span class="badge badge-info">2020</span></div>
-</div>
+</a>
 
 </div>
 
